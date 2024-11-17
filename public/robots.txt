@@ -1,0 +1,24 @@
+User-agent: *
+Allow: /
+
+# Allow all crawlers
+Sitemap: https://calcfactory.com/sitemap.xml
+
+# Prevent crawling of development URLs
+Disallow: /dev/
+Disallow: /test/
+Disallow: /staging/
+
+# Rate limiting
+Crawl-delay: 10
+
+# Prevent duplicate content
+Disallow: /*?*sort=
+Disallow: /*?*filter=
+Disallow: /*?*page=
+
+# Social media crawlers
+User-agent: Twitterbot
+Allow: /
+User-agent: facebookexternalhit
+Allow: /
